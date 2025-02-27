@@ -1,0 +1,220 @@
+{
+    "DeepSeek-R1 Official": {
+        "accuracy": 0.1,
+        "results": [
+            {
+                "question_id": 693,
+                "question": "Enhancement of job satisfaction and productivity are key characteristics of which theoretical perspective of work design?",
+                "difficulty": 0.043000000000000003,
+                "category": "business",
+                "options": [
+                    "Human Relations theory",
+                    "Process improvement",
+                    "Job enrichment theory",
+                    "Job enlargement theory",
+                    "Time and Motion study",
+                    "Techno-structural change model",
+                    "Scientific management theory",
+                    "Socio-technical systems",
+                    "Motivational theory",
+                    "Job characteristics model"
+                ],
+                "correct_answer": "H",
+                "predicted_answer": "J",
+                "is_correct": false,
+                "full_response": "J"
+            },
+            {
+                "question_id": 887,
+                "question": "Which statement below best represents Durkheim's view of the function of punishment?",
+                "difficulty": 0.022,
+                "category": "law",
+                "options": [
+                    "Vengeance.",
+                    "Deterrence.",
+                    "Restoration.",
+                    "Moral education.",
+                    "Indemnification.",
+                    "Rehabilitation.",
+                    "Social control.",
+                    "Incapacitation.",
+                    "Desert."
+                ],
+                "correct_answer": "A",
+                "predicted_answer": "D",
+                "is_correct": false,
+                "full_response": "D"
+            },
+            {
+                "question_id": 4862,
+                "question": "When did Aborigines occupy the harsh interior of Australia?",
+                "difficulty": 0.021,
+                "category": "history",
+                "options": [
+                    "40,000–45,000 years ago",
+                    "60,000–65,000 years ago",
+                    "70,000–75,000 years ago",
+                    "15,000–20,000 years ago",
+                    "10,000–12,000 years ago",
+                    "30,000–35,000 years ago",
+                    "50,000–55,000 years ago",
+                    "25,000–30,000 years ago",
+                    "35,000–40,000 years ago",
+                    "20,000–25,000 years ago"
+                ],
+                "correct_answer": "J",
+                "predicted_answer": "B",
+                "is_correct": false,
+                "full_response": "B"
+            },
+            {
+                "question_id": 5658,
+                "question": "In what ways is it possible to gain a definition of terrorism?",
+                "difficulty": 0.022,
+                "category": "other",
+                "options": [
+                    "A terrorist attack is that which uses the threat or use of organized violence to achieve political objectives. This may include kidnappings and organized violence for financial gain, and such attacks can be undertaken by groups or individuals.",
+                    "Organization is essential for a successful campaign to bring about the political goals that are being sought. An act of terrorism targets an audience that extends beyond the immediate victims and is characterized as being a weapon of the weak.",
+                    "Terrorist violence is a form of psychological warfare that generates fear in a target audience by attacking members of that group. Selected targets are chosen at random from a cross-section of groups within the state ranging from political representatives, security forces, civilians or law enforcement. Random acts of violence contribute to the sense of insecurity and societal instability.",
+                    "Terrorism is a broad concept that is understood to denote the threat or use of organized violence for the attainment of political objectives. The definition may therefore be inclusive of governments as targets or perpetrators and cases of war (hot and cold) where terror and counter-terror measures are tactics of either side."
+                ],
+                "correct_answer": "B",
+                "predicted_answer": "D",
+                "is_correct": false,
+                "full_response": "D"
+            },
+            {
+                "question_id": 7107,
+                "question": "The cabbages you grow in your summer garden are",
+                "difficulty": 0.085,
+                "category": "economics",
+                "options": [
+                    "not counted in either GDP or NDP.",
+                    "not counted in GDP.",
+                    "counted in GDP under I.",
+                    "counted in GDP under X-M.",
+                    "counted in GDP under G.",
+                    "counted in GDP under NX.",
+                    "counted in GDP under C.",
+                    "counted in NDP but not GDP.",
+                    "counted in GDP but not NDP.",
+                    "counted in both GDP and NDP."
+                ],
+                "correct_answer": "B",
+                "predicted_answer": "A",
+                "is_correct": false,
+                "full_response": "A"
+            },
+            {
+                "question_id": 8876,
+                "question": "Statement 1 | Every quotient ring of every commutative ring is again a commutative ring. Statement 2 | An ideal N in a ring R with unity 1 is all of R if and only if 1 in N.",
+                "difficulty": 0.022,
+                "category": "math",
+                "options": [
+                    "False, Not given",
+                    "Not given, Not given",
+                    "Both statements are partially true",
+                    "False, True",
+                    "True, False",
+                    "True, True",
+                    "Not given, True",
+                    "Not given, False",
+                    "True, Not given",
+                    "False, False"
+                ],
+                "correct_answer": "E",
+                "predicted_answer": "F",
+                "is_correct": false,
+                "full_response": "F"
+            },
+            {
+                "question_id": 9685,
+                "question": "The surface of the Sun has a temperature close to 6,000 K and it emits a blackbody (Planck) spectrum that reaches a maximum near 500 nm. For a body with a surface temperature close to 300 K, at what wavelength would the thermal spectrum reach a maximum?",
+                "difficulty": 0.024,
+                "category": "physics",
+                "options": [
+                    "10 mm",
+                    "1,000 nm",
+                    "10,000 nm",
+                    "1 m",
+                    "1 cm",
+                    "10 cm",
+                    "10:00 PM",
+                    "100 Pm",
+                    "100 mm",
+                    "500 nm"
+                ],
+                "correct_answer": "G",
+                "predicted_answer": "C",
+                "is_correct": false,
+                "full_response": "C"
+            },
+            {
+                "question_id": 10121,
+                "question": "You have collected a tissue specimen that you would like to preserve by freeze drying. To ensure the integrity of the specimen, the temperature should not exceed $-5.00{ }^{\\circ} \\mathrm{C}$. The vapor pressure of ice at $273.16 \\mathrm{~K}$ is $624 \\mathrm{~Pa}$. What is the maximum pressure at which the freeze drying can be carried out?",
+                "difficulty": 0.07,
+                "category": "physics",
+                "options": [
+                    "600 $\\mathrm{~Pa}$",
+                    "500 $\\mathrm{~Pa}$",
+                    "275 $\\mathrm{~Pa}$",
+                    "550 $\\mathrm{~Pa}$",
+                    "375 $\\mathrm{~Pa}$",
+                    "450 $\\mathrm{~Pa}$",
+                    "625 $\\mathrm{~Pa}$",
+                    "350 $\\mathrm{~Pa}$",
+                    "300 $\\mathrm{~Pa}$",
+                    " 425 $\\mathrm{~Pa}$"
+                ],
+                "correct_answer": "J",
+                "predicted_answer": "E",
+                "is_correct": false,
+                "full_response": "E"
+            },
+            {
+                "question_id": 11195,
+                "question": " Ashford argues that worries about causing dependency on aid agencies among those in extreme poverty does not mean that we should",
+                "difficulty": 0.021,
+                "category": "philosophy",
+                "options": [
+                    "suggest that aid agencies are the only solution to global poverty.",
+                    "abandon the world's poor to their unjust predicament.",
+                    "argue that aid agencies are inherently unjust.",
+                    "increase the amount of aid given to the world's poor.",
+                    "ignore the issue of global economic justice.",
+                    "force the world's poor to be self-sufficient.",
+                    "stop all forms of international aid.",
+                    "accept the view that we have no negative duties to the poor.",
+                    "adopt a social contract approach to the problem of global economic justice.",
+                    "legally abolish aid agencies."
+                ],
+                "correct_answer": "I",
+                "predicted_answer": "B",
+                "is_correct": false,
+                "full_response": "B"
+            },
+            {
+                "question_id": 11373,
+                "question": "(1/2)CH_4 + O_2 + 3.76N_2 \\rightharpoonup (1/2)CO_2+ H_2O + 3.76N_2 This combustion can happen as a constant pressure or constantvolume process. Calculate the maximum temperaturesof combustion for these two processes. Assume that for the temperature range of interest, the specificheats are constant. Also assume that methane reactswith astoichiometricamount of air and that initially, themethane and oxygen are at STP. The heat of combustionfor one mole of CH_4 burned is equal to 48,418.7 kcal/mole.",
+                "difficulty": 0.032,
+                "category": "engineering",
+                "options": [
+                    "3554°C for constant volume, 2267°C for constant pressure",
+                    "2954°C for constant volume, 2967°C for constant pressure",
+                    "3654°C for constant volume, 2167°C for constant pressure",
+                    "3154°C for constant volume, 2767°C for constant pressure",
+                    "3354°C for constant volume, 2467°C for constant pressure",
+                    "3454°C for constant volume, 2367°C for constant pressure",
+                    "3254°C for constant volume, 2567°C for constant pressure",
+                    "3754°C for constant volume, 2067°C for constant pressure",
+                    "2854°C for constant volume, 3067°C for constant pressure",
+                    "3054°C for constant volume, 2867°C for constant pressure"
+                ],
+                "correct_answer": "E",
+                "predicted_answer": "E",
+                "is_correct": true,
+                "full_response": "E"
+            }
+        ]
+    }
+}

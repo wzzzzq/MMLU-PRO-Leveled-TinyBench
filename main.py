@@ -3,10 +3,30 @@ from datasets import load_dataset
 from typing import Dict, List, Tuple
 import json
 from datetime import datetime
+import os
+import time
 
-def load_test_data():
-    """Load the hardest split of MMLU-PRO dataset"""
-    return load_dataset("wzzzq/MMLU-PRO-Leveled-TinyBench", split="extremely_hard_0.0_0.1")
+# Create results directory if not exists
+os.makedirs("./results", exist_ok=True)
+
+# Define all difficulty splits
+DIFFICULTY_SPLITS = [
+    ("extremely_hard_0.0_0.1", "Extremely Hard (0.0-0.1)"),
+    ("very_hard_0.1_0.2", "Very Hard (0.1-0.2)"),
+    ("hard_0.2_0.3", "Hard (0.2-0.3)"),
+    ("moderately_hard_0.3_0.4", "Moderately Hard (0.3-0.4)"),
+    ("intermediate_0.4_0.5", "Intermediate (0.4-0.5)"),
+    ("medium_0.5_0.6", "Medium (0.5-0.6)"),
+    ("moderately_easy_0.6_0.7", "Moderately Easy (0.6-0.7)"),
+    ("easy_0.7_0.8", "Easy (0.7-0.8)"),
+    ("very_easy_0.8_0.9", "Very Easy (0.8-0.9)"),
+    ("extremely_easy_0.9_1.0", "Extremely Easy (0.9-1.0)")
+]
+
+def load_all_splits():
+    """Load all difficulty splits of the dataset"""
+    return [(split, load_dataset("wzzzq/MMLU-PRO-Leveled-TinyBench", split=split))
+            for split, name in DIFFICULTY_SPLITS]
 
 def format_question(entry):
     question = entry["question"]
@@ -37,22 +57,18 @@ def format_question(entry):
         "[ONLY YOUR FINAL LETTER CHOICE HERE].\n"
         "Answer: "
     )
-    
     return prompt
 
-
-
-def evaluate_model(client, dataset) -> Tuple[float, List[Dict]]:
-    """Evaluate a single model on the dataset"""
+def evaluate_model(client, dataset_split) -> Tuple[float, List[Dict]]:
+    """Evaluate a single model on a dataset split"""
     correct = 0
     total = 0
     results = []
-    
-    for problem in dataset:
+
+    for problem in dataset_split:
         question = format_question(problem)
         response = client.send_text(question)
         
-        # Extract the answer (first letter in the response)
         predicted_answer = response.strip()[0].upper() if response else ""
         correct_answer = problem['answer']
         
@@ -61,71 +77,117 @@ def evaluate_model(client, dataset) -> Tuple[float, List[Dict]]:
             correct += 1
         total += 1
         
-        # Enhanced result logging
         results.append({
-            'question_id': problem['question_id'],  # Assuming dataset has 'id' field
-            'question': problem['question'],
-            'difficulty': problem['difficulty'],  # Assuming dataset has 'difficulty' field
+            'question_id': problem['question_id'],
+            'difficulty': problem['difficulty'],
             'category': problem['category'],
-            'options': problem['options'],
             'correct_answer': correct_answer,
             'predicted_answer': predicted_answer,
             'is_correct': is_correct,
-            'full_response': response,
+            'response': response
         })
-        
-        print(f"Progress: {total} questions processed. Current accuracy: {(correct/total)*100:.2f}%")
-    
-    accuracy = correct / total
+
+    accuracy = correct / total if total > 0 else 0.0
     return accuracy, results
 
-def generate_markdown_table(results: Dict) -> str:
-    """Generate markdown table from evaluation results"""
-    md = "# Model Evaluation Results\n\n"
-    md += "| Model Name | Accuracy |\n"
-    md += "|------------|----------|\n"
+def initialize_report_files(timestamp: str) -> Tuple[str, str]:
+    """Initialize output files and return their paths"""
+    json_path = f"./results/evaluation_full_{timestamp}.json"
+    md_path = f"./results/evaluation_report_{timestamp}.md"
     
-    # Sort models by accuracy descending
-    sorted_models = sorted(results.items(), 
-                         key=lambda x: x[1]['accuracy'], 
-                         reverse=True)
+    with open(md_path, 'w', encoding='utf-8') as f:
+        f.write("# Model Performance Across Difficulty Levels\n\n")
+        headers = ["Model"] + [split[1] for split in DIFFICULTY_SPLITS] + ["Average"]
+        f.write(f"| {' | '.join(headers)} |\n")
+        f.write(f"|{'|'.join(['-------'] * len(headers))}|\n")
     
-    for model_name, data in sorted_models:
-        accuracy = data['accuracy']
-        md += f"| {model_name} | {accuracy*100:.2f}% |\n"
+    return json_path, md_path
+
+def process_single_split(client, split: Tuple[str, str], all_splits: List, max_retries: int = 3) -> Tuple[float, List[Dict]]:
+    """Process a single difficulty split for a model with retry logic"""
+    split_key, display_name = split
+    dataset = next((ds for s, ds in all_splits if s == split_key), None)
     
-    return md
+    if not dataset:
+        print(f"Warning: Missing dataset for {split_key}")
+        return 0.0, []
+    
+    print(f"Processing split: {display_name}")
+    
+    retries = 0
+    while retries < max_retries:
+        try:
+            accuracy, split_results = evaluate_model(client, dataset)
+            print(f"Split accuracy: {accuracy*100:.2f}%")
+            return accuracy, split_results
+        except Exception as e:
+            retries += 1
+            if retries < max_retries:
+                print(f"Error processing split (attempt {retries}/{max_retries}): {str(e)}")
+                print(f"Retrying...")
+                time.sleep(2)  # Add a small delay before retrying
+            else:
+                print(f"Failed after {max_retries} attempts for split {display_name}: {str(e)}")
+                return 0.0, []
+
+
+def evaluate_single_model(model_name: str, client, all_splits: List) -> Dict:
+    """Evaluate a single model across all difficulty splits"""
+    print(f"\n{'='*40}\nTesting model: {model_name}\n{'='*40}")
+    
+    model_results = {'splits': {}, 'details': {}}
+    
+    for split in DIFFICULTY_SPLITS:
+        accuracy, split_results = process_single_split(client, split, all_splits)
+        model_results['splits'][split[0]] = accuracy
+        model_results['details'][split[0]] = split_results
+    
+    return model_results
+
+def save_results_to_json(results: Dict, json_path: str):
+    """Save current results state to JSON file"""
+    with open(json_path, 'w', encoding='utf-8') as f:
+        json.dump(results, f, ensure_ascii=False, indent=4)
+
+def calculate_average_accuracy(accuracies: List[float]) -> float:
+    """Calculate average accuracy from a list of split accuracies"""
+    return sum(accuracies)/len(accuracies) if accuracies else 0.0
+
+def generate_markdown_row(model_name: str, model_data: Dict) -> str:
+    """Generate a markdown table row for a model's results"""
+    accuracies = []
+    row = [model_name]
+    
+    for split_key, _ in DIFFICULTY_SPLITS:
+        accuracy = model_data['splits'].get(split_key, 0.0)
+        accuracies.append(accuracy)
+        row.append(f"{accuracy*100:.2f}%")
+    
+    avg_accuracy = calculate_average_accuracy(accuracies)
+    row.append(f"{avg_accuracy*100:.2f}%")
+    
+    return f"| {' | '.join(row)} |\n"
 
 if __name__ == "__main__":
-    """Main function to run the evaluation"""
-    dataset = load_test_data()
+    # Initialization
+    all_splits = load_all_splits()
     client_dict = get_gpt_client_dict()
-    
-    results = {}
-    
-    for model_name, client in client_dict.items():
-        print(f"\nTesting model: {model_name}")
-        try:
-            accuracy, model_results = evaluate_model(client, dataset)
-            results[model_name] = {
-                'accuracy': accuracy,
-                'results': model_results
-            }
-            print(f"{model_name} final accuracy: {accuracy*100:.2f}%")
-        except Exception as e:
-            print(f"Error testing {model_name}: {str(e)}")
-    
-    # Save results to files
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    
-    # Save JSON
-    json_filename = f'evaluation_results_{timestamp}.json'
-    with open(json_filename, 'w', encoding='utf-8') as f:
-        json.dump(results, f, ensure_ascii=False, indent=4)
-    
-    # Save Markdown
-    md_filename = f'evaluation_report_{timestamp}.md'
-    with open(md_filename, 'w', encoding='utf-8') as f:
-        f.write(generate_markdown_table(results))
-    
-    print(f"\nSaved results to {json_filename} and {md_filename}")
+    json_path, md_path = initialize_report_files(timestamp)
+    results = {}
+
+    # Main evaluation pipeline
+    for model_name, client in client_dict.items():
+        # Evaluate model across all splits
+        model_results = evaluate_single_model(model_name, client, all_splits)
+        results[model_name] = model_results
+        
+        # Persist results
+        save_results_to_json(results, json_path)
+        
+        # Update markdown report
+        md_row = generate_markdown_row(model_name, model_results)
+        with open(md_path, 'a', encoding='utf-8') as f:
+            f.write(md_row)
+
+    print(f"\nSaved results to:\n- {json_path}\n- {md_path}")

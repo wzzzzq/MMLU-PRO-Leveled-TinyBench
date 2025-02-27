@@ -1,0 +1,314 @@
+{
+    "GLM-4-Air": {
+        "splits": {
+            "extremely_hard_0.0_0.1": 0.0,
+            "very_hard_0.1_0.2": 0.0,
+            "hard_0.2_0.3": 0.0,
+            "moderately_hard_0.3_0.4": 0.0,
+            "intermediate_0.4_0.5": 0.0,
+            "medium_0.5_0.6": 0.0,
+            "moderately_easy_0.6_0.7": 0.0,
+            "easy_0.7_0.8": 0.0,
+            "very_easy_0.8_0.9": 0.0,
+            "extremely_easy_0.9_1.0": 0.0
+        },
+        "details": {
+            "extremely_hard_0.0_0.1": [],
+            "very_hard_0.1_0.2": [],
+            "hard_0.2_0.3": [],
+            "moderately_hard_0.3_0.4": [],
+            "intermediate_0.4_0.5": [],
+            "medium_0.5_0.6": [],
+            "moderately_easy_0.6_0.7": [],
+            "easy_0.7_0.8": [],
+            "very_easy_0.8_0.9": [],
+            "extremely_easy_0.9_1.0": []
+        }
+    },
+    "GLM-4-PLUS": {
+        "splits": {
+            "extremely_hard_0.0_0.1": 0.0,
+            "very_hard_0.1_0.2": 0.0,
+            "hard_0.2_0.3": 0.0,
+            "moderately_hard_0.3_0.4": 0.0,
+            "intermediate_0.4_0.5": 0.0,
+            "medium_0.5_0.6": 0.0,
+            "moderately_easy_0.6_0.7": 0.0,
+            "easy_0.7_0.8": 0.0,
+            "very_easy_0.8_0.9": 0.0,
+            "extremely_easy_0.9_1.0": 0.0
+        },
+        "details": {
+            "extremely_hard_0.0_0.1": [],
+            "very_hard_0.1_0.2": [],
+            "hard_0.2_0.3": [],
+            "moderately_hard_0.3_0.4": [],
+            "intermediate_0.4_0.5": [],
+            "medium_0.5_0.6": [],
+            "moderately_easy_0.6_0.7": [],
+            "easy_0.7_0.8": [],
+            "very_easy_0.8_0.9": [],
+            "extremely_easy_0.9_1.0": []
+        }
+    },
+    "DeepSeek-V3 Official": {
+        "splits": {
+            "extremely_hard_0.0_0.1": 0.0,
+            "very_hard_0.1_0.2": 0.0,
+            "hard_0.2_0.3": 0.0,
+            "moderately_hard_0.3_0.4": 0.0,
+            "intermediate_0.4_0.5": 0.0,
+            "medium_0.5_0.6": 0.0,
+            "moderately_easy_0.6_0.7": 0.0,
+            "easy_0.7_0.8": 0.0,
+            "very_easy_0.8_0.9": 0.0,
+            "extremely_easy_0.9_1.0": 0.0
+        },
+        "details": {
+            "extremely_hard_0.0_0.1": [],
+            "very_hard_0.1_0.2": [],
+            "hard_0.2_0.3": [],
+            "moderately_hard_0.3_0.4": [],
+            "intermediate_0.4_0.5": [],
+            "medium_0.5_0.6": [],
+            "moderately_easy_0.6_0.7": [],
+            "easy_0.7_0.8": [],
+            "very_easy_0.8_0.9": [],
+            "extremely_easy_0.9_1.0": []
+        }
+    },
+    "DeepSeek-R1 Official": {
+        "splits": {
+            "extremely_hard_0.0_0.1": 0.0,
+            "very_hard_0.1_0.2": 0.0,
+            "hard_0.2_0.3": 0.0,
+            "moderately_hard_0.3_0.4": 0.0,
+            "intermediate_0.4_0.5": 0.0,
+            "medium_0.5_0.6": 0.0,
+            "moderately_easy_0.6_0.7": 0.0,
+            "easy_0.7_0.8": 0.0,
+            "very_easy_0.8_0.9": 0.0,
+            "extremely_easy_0.9_1.0": 0.0
+        },
+        "details": {
+            "extremely_hard_0.0_0.1": [],
+            "very_hard_0.1_0.2": [],
+            "hard_0.2_0.3": [],
+            "moderately_hard_0.3_0.4": [],
+            "intermediate_0.4_0.5": [],
+            "medium_0.5_0.6": [],
+            "moderately_easy_0.6_0.7": [],
+            "easy_0.7_0.8": [],
+            "very_easy_0.8_0.9": [],
+            "extremely_easy_0.9_1.0": []
+        }
+    },
+    "火山方舟DeepSeek-R1": {
+        "splits": {
+            "extremely_hard_0.0_0.1": 0.0,
+            "very_hard_0.1_0.2": 0.0,
+            "hard_0.2_0.3": 0.0,
+            "moderately_hard_0.3_0.4": 0.0,
+            "intermediate_0.4_0.5": 0.0,
+            "medium_0.5_0.6": 0.0,
+            "moderately_easy_0.6_0.7": 0.0,
+            "easy_0.7_0.8": 0.0,
+            "very_easy_0.8_0.9": 0.0,
+            "extremely_easy_0.9_1.0": 0.0
+        },
+        "details": {
+            "extremely_hard_0.0_0.1": [],
+            "very_hard_0.1_0.2": [],
+            "hard_0.2_0.3": [],
+            "moderately_hard_0.3_0.4": [],
+            "intermediate_0.4_0.5": [],
+            "medium_0.5_0.6": [],
+            "moderately_easy_0.6_0.7": [],
+            "easy_0.7_0.8": [],
+            "very_easy_0.8_0.9": [],
+            "extremely_easy_0.9_1.0": []
+        }
+    },
+    "火山方舟DeepSeek-V3": {
+        "splits": {
+            "extremely_hard_0.0_0.1": 0.0,
+            "very_hard_0.1_0.2": 0.0,
+            "hard_0.2_0.3": 0.0,
+            "moderately_hard_0.3_0.4": 0.0,
+            "intermediate_0.4_0.5": 0.0,
+            "medium_0.5_0.6": 0.0,
+            "moderately_easy_0.6_0.7": 0.0,
+            "easy_0.7_0.8": 0.0,
+            "very_easy_0.8_0.9": 0.0,
+            "extremely_easy_0.9_1.0": 0.0
+        },
+        "details": {
+            "extremely_hard_0.0_0.1": [],
+            "very_hard_0.1_0.2": [],
+            "hard_0.2_0.3": [],
+            "moderately_hard_0.3_0.4": [],
+            "intermediate_0.4_0.5": [],
+            "medium_0.5_0.6": [],
+            "moderately_easy_0.6_0.7": [],
+            "easy_0.7_0.8": [],
+            "very_easy_0.8_0.9": [],
+            "extremely_easy_0.9_1.0": []
+        }
+    },
+    "阿里云DeepSeek-R1": {
+        "splits": {
+            "extremely_hard_0.0_0.1": 0.0,
+            "very_hard_0.1_0.2": 0.0,
+            "hard_0.2_0.3": 0.0,
+            "moderately_hard_0.3_0.4": 0.0,
+            "intermediate_0.4_0.5": 0.0,
+            "medium_0.5_0.6": 0.0,
+            "moderately_easy_0.6_0.7": 0.0,
+            "easy_0.7_0.8": 0.0,
+            "very_easy_0.8_0.9": 0.0,
+            "extremely_easy_0.9_1.0": 0.0
+        },
+        "details": {
+            "extremely_hard_0.0_0.1": [],
+            "very_hard_0.1_0.2": [],
+            "hard_0.2_0.3": [],
+            "moderately_hard_0.3_0.4": [],
+            "intermediate_0.4_0.5": [],
+            "medium_0.5_0.6": [],
+            "moderately_easy_0.6_0.7": [],
+            "easy_0.7_0.8": [],
+            "very_easy_0.8_0.9": [],
+            "extremely_easy_0.9_1.0": []
+        }
+    },
+    "阿里云DeepSeek-V3": {
+        "splits": {
+            "extremely_hard_0.0_0.1": 0.0,
+            "very_hard_0.1_0.2": 0.0,
+            "hard_0.2_0.3": 0.0,
+            "moderately_hard_0.3_0.4": 0.0,
+            "intermediate_0.4_0.5": 0.0,
+            "medium_0.5_0.6": 0.0,
+            "moderately_easy_0.6_0.7": 0.0,
+            "easy_0.7_0.8": 0.0,
+            "very_easy_0.8_0.9": 0.0,
+            "extremely_easy_0.9_1.0": 0.0
+        },
+        "details": {
+            "extremely_hard_0.0_0.1": [],
+            "very_hard_0.1_0.2": [],
+            "hard_0.2_0.3": [],
+            "moderately_hard_0.3_0.4": [],
+            "intermediate_0.4_0.5": [],
+            "medium_0.5_0.6": [],
+            "moderately_easy_0.6_0.7": [],
+            "easy_0.7_0.8": [],
+            "very_easy_0.8_0.9": [],
+            "extremely_easy_0.9_1.0": []
+        }
+    },
+    "腾讯云DeepSeek-R1": {
+        "splits": {
+            "extremely_hard_0.0_0.1": 0.0,
+            "very_hard_0.1_0.2": 0.0,
+            "hard_0.2_0.3": 0.0,
+            "moderately_hard_0.3_0.4": 0.0,
+            "intermediate_0.4_0.5": 0.0,
+            "medium_0.5_0.6": 0.0,
+            "moderately_easy_0.6_0.7": 0.0,
+            "easy_0.7_0.8": 0.0,
+            "very_easy_0.8_0.9": 0.0,
+            "extremely_easy_0.9_1.0": 0.0
+        },
+        "details": {
+            "extremely_hard_0.0_0.1": [],
+            "very_hard_0.1_0.2": [],
+            "hard_0.2_0.3": [],
+            "moderately_hard_0.3_0.4": [],
+            "intermediate_0.4_0.5": [],
+            "medium_0.5_0.6": [],
+            "moderately_easy_0.6_0.7": [],
+            "easy_0.7_0.8": [],
+            "very_easy_0.8_0.9": [],
+            "extremely_easy_0.9_1.0": []
+        }
+    },
+    "腾讯云DeepSeek-V3": {
+        "splits": {
+            "extremely_hard_0.0_0.1": 0.0,
+            "very_hard_0.1_0.2": 0.0,
+            "hard_0.2_0.3": 0.0,
+            "moderately_hard_0.3_0.4": 0.0,
+            "intermediate_0.4_0.5": 0.0,
+            "medium_0.5_0.6": 0.0,
+            "moderately_easy_0.6_0.7": 0.0,
+            "easy_0.7_0.8": 0.0,
+            "very_easy_0.8_0.9": 0.0,
+            "extremely_easy_0.9_1.0": 0.0
+        },
+        "details": {
+            "extremely_hard_0.0_0.1": [],
+            "very_hard_0.1_0.2": [],
+            "hard_0.2_0.3": [],
+            "moderately_hard_0.3_0.4": [],
+            "intermediate_0.4_0.5": [],
+            "medium_0.5_0.6": [],
+            "moderately_easy_0.6_0.7": [],
+            "easy_0.7_0.8": [],
+            "very_easy_0.8_0.9": [],
+            "extremely_easy_0.9_1.0": []
+        }
+    },
+    "硅基流动DeepSeek-R1": {
+        "splits": {
+            "extremely_hard_0.0_0.1": 0.0,
+            "very_hard_0.1_0.2": 0.0,
+            "hard_0.2_0.3": 0.0,
+            "moderately_hard_0.3_0.4": 0.0,
+            "intermediate_0.4_0.5": 0.0,
+            "medium_0.5_0.6": 0.0,
+            "moderately_easy_0.6_0.7": 0.0,
+            "easy_0.7_0.8": 0.0,
+            "very_easy_0.8_0.9": 0.0,
+            "extremely_easy_0.9_1.0": 0.0
+        },
+        "details": {
+            "extremely_hard_0.0_0.1": [],
+            "very_hard_0.1_0.2": [],
+            "hard_0.2_0.3": [],
+            "moderately_hard_0.3_0.4": [],
+            "intermediate_0.4_0.5": [],
+            "medium_0.5_0.6": [],
+            "moderately_easy_0.6_0.7": [],
+            "easy_0.7_0.8": [],
+            "very_easy_0.8_0.9": [],
+            "extremely_easy_0.9_1.0": []
+        }
+    },
+    "硅基流动DeepSeek-V3": {
+        "splits": {
+            "extremely_hard_0.0_0.1": 0.0,
+            "very_hard_0.1_0.2": 0.0,
+            "hard_0.2_0.3": 0.0,
+            "moderately_hard_0.3_0.4": 0.0,
+            "intermediate_0.4_0.5": 0.0,
+            "medium_0.5_0.6": 0.0,
+            "moderately_easy_0.6_0.7": 0.0,
+            "easy_0.7_0.8": 0.0,
+            "very_easy_0.8_0.9": 0.0,
+            "extremely_easy_0.9_1.0": 0.0
+        },
+        "details": {
+            "extremely_hard_0.0_0.1": [],
+            "very_hard_0.1_0.2": [],
+            "hard_0.2_0.3": [],
+            "moderately_hard_0.3_0.4": [],
+            "intermediate_0.4_0.5": [],
+            "medium_0.5_0.6": [],
+            "moderately_easy_0.6_0.7": [],
+            "easy_0.7_0.8": [],
+            "very_easy_0.8_0.9": [],
+            "extremely_easy_0.9_1.0": []
+        }
+    }
+}

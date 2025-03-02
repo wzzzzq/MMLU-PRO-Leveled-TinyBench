@@ -59,12 +59,12 @@ DS2 = GPTClientBase(os.getenv("DEEPSEEK_API_KEY"),"deepseek-reasoner","https://a
 
 def get_gpt_clients() -> list:
     return [
-        ("GLM-4-Air", GLM1),
-        ("GLM-4-PLUS",GLM2),
-        ("DeepSeek-V3 Official",DS1),
+        #("GLM-4-Air", GLM1),
+        #("GLM-4-PLUS",GLM2),
+        #("火山方舟DeepSeek-R1", VolcanoAI1),
+        #("火山方舟DeepSeek-V3", VolcanoAI2),
+        #("DeepSeek-V3 Official",DS1),
         ("DeepSeek-R1 Official",DS2),
-        ("火山方舟DeepSeek-R1", VolcanoAI1),
-        ("火山方舟DeepSeek-V3", VolcanoAI2),
         ("阿里云DeepSeek-R1", ALI1),
         ("阿里云DeepSeek-V3", ALI2),
         ("腾讯云DeepSeek-R1",TEN1),

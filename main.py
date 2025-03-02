@@ -5,6 +5,7 @@ import json
 from datetime import datetime
 import os
 import time
+import argparse
 
 # Create results directory if not exists
 os.makedirs("./results", exist_ok=True)
@@ -59,13 +60,15 @@ def format_question(entry):
     )
     return prompt
 
-def evaluate_model(client, dataset_split) -> Tuple[float, List[Dict]]:
+def evaluate_model(client, dataset_split,num=10) -> Tuple[float, List[Dict]]:
     """Evaluate a single model on a dataset split"""
     correct = 0
     total = 0
     results = []
 
     for problem in dataset_split:
+        if total>=num:
+            break
         question = format_question(problem)
         response = client.send_text(question)
         
@@ -103,7 +106,7 @@ def initialize_report_files(timestamp: str) -> Tuple[str, str]:
     
     return json_path, md_path
 
-def process_single_split(client, split: Tuple[str, str], all_splits: List, max_retries: int = 3) -> Tuple[float, List[Dict]]:
+def process_single_split(client, split: Tuple[str, str], all_splits: List,num, max_retries: int = 3) -> Tuple[float, List[Dict]]:
     """Process a single difficulty split for a model with retry logic"""
     split_key, display_name = split
     dataset = next((ds for s, ds in all_splits if s == split_key), None)
@@ -117,7 +120,7 @@ def process_single_split(client, split: Tuple[str, str], all_splits: List, max_r
     retries = 0
     while retries < max_retries:
         try:
-            accuracy, split_results = evaluate_model(client, dataset)
+            accuracy, split_results = evaluate_model(client, dataset,num)
             print(f"Split accuracy: {accuracy*100:.2f}%")
             return accuracy, split_results
         except Exception as e:
@@ -131,14 +134,14 @@ def process_single_split(client, split: Tuple[str, str], all_splits: List, max_r
                 return 0.0, []
 
 
-def evaluate_single_model(model_name: str, client, all_splits: List) -> Dict:
+def evaluate_single_model(model_name: str, client, all_splits: List,num) -> Dict:
     """Evaluate a single model across all difficulty splits"""
     print(f"\n{'='*40}\nTesting model: {model_name}\n{'='*40}")
     
     model_results = {'splits': {}, 'details': {}}
     
     for split in DIFFICULTY_SPLITS:
-        accuracy, split_results = process_single_split(client, split, all_splits)
+        accuracy, split_results = process_single_split(client, split, all_splits,num)
         model_results['splits'][split[0]] = accuracy
         model_results['details'][split[0]] = split_results
     
@@ -170,6 +173,11 @@ def generate_markdown_row(model_name: str, model_data: Dict) -> str:
 
 if __name__ == "__main__":
     # Initialization
+    parser = argparse.ArgumentParser(description='Tiny Benchmark Test')
+    parser.add_argument('--num', type=int, default=10, help='')
+    args = parser.parse_args()
+    num=args.num
+
     all_splits = load_all_splits()
     client_dict = get_gpt_client_dict()
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -179,7 +187,7 @@ if __name__ == "__main__":
     # Main evaluation pipeline
     for model_name, client in client_dict.items():
         # Evaluate model across all splits
-        model_results = evaluate_single_model(model_name, client, all_splits)
+        model_results = evaluate_single_model(model_name, client, all_splits,num)
         results[model_name] = model_results
         
         # Persist results

@@ -1,0 +1,5 @@
+# Model Performance Across Difficulty Levels
+
+| Model | Extremely Hard (0.0-0.1) | Very Hard (0.1-0.2) | Hard (0.2-0.3) | Moderately Hard (0.3-0.4) | Intermediate (0.4-0.5) | Medium (0.5-0.6) | Moderately Easy (0.6-0.7) | Easy (0.7-0.8) | Very Easy (0.8-0.9) | Extremely Easy (0.9-1.0) | Average |
+|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
+| DeepSeek-R1 Official | 10.00% | 50.00% | 60.00% | 60.00% | 70.00% | 80.00% | 90.00% | 90.00% | 100.00% | 100.00% | 71.00% |

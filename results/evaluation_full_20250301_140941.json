@@ -1,0 +1,938 @@
+{
+    "DeepSeek-R1 Official": {
+        "splits": {
+            "extremely_hard_0.0_0.1": 0.1,
+            "very_hard_0.1_0.2": 0.5,
+            "hard_0.2_0.3": 0.6,
+            "moderately_hard_0.3_0.4": 0.6,
+            "intermediate_0.4_0.5": 0.7,
+            "medium_0.5_0.6": 0.8,
+            "moderately_easy_0.6_0.7": 0.9,
+            "easy_0.7_0.8": 0.9,
+            "very_easy_0.8_0.9": 1.0,
+            "extremely_easy_0.9_1.0": 1.0
+        },
+        "details": {
+            "extremely_hard_0.0_0.1": [
+                {
+                    "question_id": 294,
+                    "difficulty": 0.073,
+                    "category": "business",
+                    "correct_answer": "B",
+                    "predicted_answer": "B",
+                    "is_correct": true,
+                    "response": "B"
+                },
+                {
+                    "question_id": 707,
+                    "difficulty": 0.027,
+                    "category": "business",
+                    "correct_answer": "E",
+                    "predicted_answer": "A",
+                    "is_correct": false,
+                    "response": "Answer: H"
+                },
+                {
+                    "question_id": 936,
+                    "difficulty": 0.022,
+                    "category": "law",
+                    "correct_answer": "D",
+                    "predicted_answer": "F",
+                    "is_correct": false,
+                    "response": "F"
+                },
+                {
+                    "question_id": 946,
+                    "difficulty": 0.045,
+                    "category": "law",
+                    "correct_answer": "B",
+                    "predicted_answer": "A",
+                    "is_correct": false,
+                    "response": "A"
+                },
+                {
+                    "question_id": 1142,
+                    "difficulty": 0.085,
+                    "category": "law",
+                    "correct_answer": "I",
+                    "predicted_answer": "C",
+                    "is_correct": false,
+                    "response": "C"
+                },
+                {
+                    "question_id": 1181,
+                    "difficulty": 0.067,
+                    "category": "law",
+                    "correct_answer": "H",
+                    "predicted_answer": "C",
+                    "is_correct": false,
+                    "response": "C"
+                },
+                {
+                    "question_id": 1282,
+                    "difficulty": 0.043000000000000003,
+                    "category": "law",
+                    "correct_answer": "F",
+                    "predicted_answer": "E",
+                    "is_correct": false,
+                    "response": "E"
+                },
+                {
+                    "question_id": 1434,
+                    "difficulty": 0.021,
+                    "category": "law",
+                    "correct_answer": "E",
+                    "predicted_answer": "I",
+                    "is_correct": false,
+                    "response": "I"
+                },
+                {
+                    "question_id": 1656,
+                    "difficulty": 0.022,
+                    "category": "law",
+                    "correct_answer": "G",
+                    "predicted_answer": "E",
+                    "is_correct": false,
+                    "response": "E"
+                },
+                {
+                    "question_id": 1688,
+                    "difficulty": 0.089,
+                    "category": "law",
+                    "correct_answer": "J",
+                    "predicted_answer": "C",
+                    "is_correct": false,
+                    "response": "C"
+                }
+            ],
+            "very_hard_0.1_0.2": [
+                {
+                    "question_id": 272,
+                    "difficulty": 0.15,
+                    "category": "business",
+                    "correct_answer": "E",
+                    "predicted_answer": "A",
+                    "is_correct": false,
+                    "response": "Answer: G"
+                },
+                {
+                    "question_id": 691,
+                    "difficulty": 0.191,
+                    "category": "business",
+                    "correct_answer": "F",
+                    "predicted_answer": "I",
+                    "is_correct": false,
+                    "response": "I"
+                },
+                {
+                    "question_id": 889,
+                    "difficulty": 0.152,
+                    "category": "law",
+                    "correct_answer": "C",
+                    "predicted_answer": "C",
+                    "is_correct": true,
+                    "response": "C"
+                },
+                {
+                    "question_id": 899,
+                    "difficulty": 0.17,
+                    "category": "law",
+                    "correct_answer": "G",
+                    "predicted_answer": "G",
+                    "is_correct": true,
+                    "response": "G"
+                },
+                {
+                    "question_id": 1150,
+                    "difficulty": 0.196,
+                    "category": "law",
+                    "correct_answer": "D",
+                    "predicted_answer": "B",
+                    "is_correct": false,
+                    "response": "B"
+                },
+                {
+                    "question_id": 1864,
+                    "difficulty": 0.106,
+                    "category": "law",
+                    "correct_answer": "J",
+                    "predicted_answer": "J",
+                    "is_correct": true,
+                    "response": "J"
+                },
+                {
+                    "question_id": 2576,
+                    "difficulty": 0.149,
+                    "category": "psychology",
+                    "correct_answer": "C",
+                    "predicted_answer": "C",
+                    "is_correct": true,
+                    "response": "C"
+                },
+                {
+                    "question_id": 2869,
+                    "difficulty": 0.152,
+                    "category": "biology",
+                    "correct_answer": "I",
+                    "predicted_answer": "I",
+                    "is_correct": true,
+                    "response": "I"
+                },
+                {
+                    "question_id": 3080,
+                    "difficulty": 0.10300000000000001,
+                    "category": "biology",
+                    "correct_answer": "A",
+                    "predicted_answer": "F",
+                    "is_correct": false,
+                    "response": "F"
+                },
+                {
+                    "question_id": 3491,
+                    "difficulty": 0.186,
+                    "category": "biology",
+                    "correct_answer": "A",
+                    "predicted_answer": "E",
+                    "is_correct": false,
+                    "response": "E"
+                }
+            ],
+            "hard_0.2_0.3": [
+                {
+                    "question_id": 84,
+                    "difficulty": 0.271,
+                    "category": "business",
+                    "correct_answer": "F",
+                    "predicted_answer": "J",
+                    "is_correct": false,
+                    "response": "J"
+                },
+                {
+                    "question_id": 94,
+                    "difficulty": 0.28600000000000003,
+                    "category": "business",
+                    "correct_answer": "J",
+                    "predicted_answer": "J",
+                    "is_correct": true,
+                    "response": "J"
+                },
+                {
+                    "question_id": 154,
+                    "difficulty": 0.23900000000000002,
+                    "category": "business",
+                    "correct_answer": "B",
+                    "predicted_answer": "B",
+                    "is_correct": true,
+                    "response": "B"
+                },
+                {
+                    "question_id": 230,
+                    "difficulty": 0.28600000000000003,
+                    "category": "business",
+                    "correct_answer": "F",
+                    "predicted_answer": "F",
+                    "is_correct": true,
+                    "response": "F"
+                },
+                {
+                    "question_id": 322,
+                    "difficulty": 0.295,
+                    "category": "business",
+                    "correct_answer": "F",
+                    "predicted_answer": "F",
+                    "is_correct": true,
+                    "response": "F"
+                },
+                {
+                    "question_id": 405,
+                    "difficulty": 0.262,
+                    "category": "business",
+                    "correct_answer": "J",
+                    "predicted_answer": "J",
+                    "is_correct": true,
+                    "response": "J"
+                },
+                {
+                    "question_id": 745,
+                    "difficulty": 0.273,
+                    "category": "business",
+                    "correct_answer": "A",
+                    "predicted_answer": "A",
+                    "is_correct": true,
+                    "response": "A"
+                },
+                {
+                    "question_id": 866,
+                    "difficulty": 0.234,
+                    "category": "law",
+                    "correct_answer": "D",
+                    "predicted_answer": "E",
+                    "is_correct": false,
+                    "response": "E"
+                },
+                {
+                    "question_id": 1122,
+                    "difficulty": 0.244,
+                    "category": "law",
+                    "correct_answer": "A",
+                    "predicted_answer": "H",
+                    "is_correct": false,
+                    "response": "H"
+                },
+                {
+                    "question_id": 1615,
+                    "difficulty": 0.255,
+                    "category": "law",
+                    "correct_answer": "H",
+                    "predicted_answer": "A",
+                    "is_correct": false,
+                    "response": "Answer: D"
+                }
+            ],
+            "moderately_hard_0.3_0.4": [
+                {
+                    "question_id": 208,
+                    "difficulty": 0.395,
+                    "category": "business",
+                    "correct_answer": "C",
+                    "predicted_answer": "C",
+                    "is_correct": true,
+                    "response": "C"
+                },
+                {
+                    "question_id": 212,
+                    "difficulty": 0.341,
+                    "category": "business",
+                    "correct_answer": "J",
+                    "predicted_answer": "J",
+                    "is_correct": true,
+                    "response": "J"
+                },
+                {
+                    "question_id": 460,
+                    "difficulty": 0.356,
+                    "category": "business",
+                    "correct_answer": "I",
+                    "predicted_answer": "H",
+                    "is_correct": false,
+                    "response": "H"
+                },
+                {
+                    "question_id": 582,
+                    "difficulty": 0.333,
+                    "category": "business",
+                    "correct_answer": "G",
+                    "predicted_answer": "E",
+                    "is_correct": false,
+                    "response": "E"
+                },
+                {
+                    "question_id": 907,
+                    "difficulty": 0.383,
+                    "category": "law",
+                    "correct_answer": "J",
+                    "predicted_answer": "B",
+                    "is_correct": false,
+                    "response": "B"
+                },
+                {
+                    "question_id": 954,
+                    "difficulty": 0.383,
+                    "category": "law",
+                    "correct_answer": "E",
+                    "predicted_answer": "E",
+                    "is_correct": true,
+                    "response": "E"
+                },
+                {
+                    "question_id": 1121,
+                    "difficulty": 0.383,
+                    "category": "law",
+                    "correct_answer": "E",
+                    "predicted_answer": "E",
+                    "is_correct": true,
+                    "response": "E"
+                },
+                {
+                    "question_id": 1317,
+                    "difficulty": 0.341,
+                    "category": "law",
+                    "correct_answer": "I",
+                    "predicted_answer": "D",
+                    "is_correct": false,
+                    "response": "D"
+                },
+                {
+                    "question_id": 1498,
+                    "difficulty": 0.383,
+                    "category": "law",
+                    "correct_answer": "G",
+                    "predicted_answer": "G",
+                    "is_correct": true,
+                    "response": "G"
+                },
+                {
+                    "question_id": 1840,
+                    "difficulty": 0.34800000000000003,
+                    "category": "law",
+                    "correct_answer": "D",
+                    "predicted_answer": "D",
+                    "is_correct": true,
+                    "response": "D"
+                }
+            ],
+            "intermediate_0.4_0.5": [
+                {
+                    "question_id": 210,
+                    "difficulty": 0.417,
+                    "category": "business",
+                    "correct_answer": "J",
+                    "predicted_answer": "J",
+                    "is_correct": true,
+                    "response": "J"
+                },
+                {
+                    "question_id": 359,
+                    "difficulty": 0.468,
+                    "category": "business",
+                    "correct_answer": "I",
+                    "predicted_answer": "I",
+                    "is_correct": true,
+                    "response": "I"
+                },
+                {
+                    "question_id": 484,
+                    "difficulty": 0.465,
+                    "category": "business",
+                    "correct_answer": "C",
+                    "predicted_answer": "C",
+                    "is_correct": true,
+                    "response": "C"
+                },
+                {
+                    "question_id": 649,
+                    "difficulty": 0.486,
+                    "category": "business",
+                    "correct_answer": "D",
+                    "predicted_answer": "H",
+                    "is_correct": false,
+                    "response": "H"
+                },
+                {
+                    "question_id": 844,
+                    "difficulty": 0.405,
+                    "category": "business",
+                    "correct_answer": "I",
+                    "predicted_answer": "I",
+                    "is_correct": true,
+                    "response": "I"
+                },
+                {
+                    "question_id": 898,
+                    "difficulty": 0.467,
+                    "category": "law",
+                    "correct_answer": "C",
+                    "predicted_answer": "C",
+                    "is_correct": true,
+                    "response": "C"
+                },
+                {
+                    "question_id": 1598,
+                    "difficulty": 0.457,
+                    "category": "law",
+                    "correct_answer": "A",
+                    "predicted_answer": "F",
+                    "is_correct": false,
+                    "response": "F"
+                },
+                {
+                    "question_id": 1798,
+                    "difficulty": 0.404,
+                    "category": "law",
+                    "correct_answer": "F",
+                    "predicted_answer": "H",
+                    "is_correct": false,
+                    "response": "H"
+                },
+                {
+                    "question_id": 2297,
+                    "difficulty": 0.489,
+                    "category": "psychology",
+                    "correct_answer": "B",
+                    "predicted_answer": "B",
+                    "is_correct": true,
+                    "response": "B"
+                },
+                {
+                    "question_id": 2919,
+                    "difficulty": 0.435,
+                    "category": "biology",
+                    "correct_answer": "J",
+                    "predicted_answer": "J",
+                    "is_correct": true,
+                    "response": "J"
+                }
+            ],
+            "medium_0.5_0.6": [
+                {
+                    "question_id": 458,
+                    "difficulty": 0.5650000000000001,
+                    "category": "business",
+                    "correct_answer": "I",
+                    "predicted_answer": "I",
+                    "is_correct": true,
+                    "response": "I"
+                },
+                {
+                    "question_id": 563,
+                    "difficulty": 0.5650000000000001,
+                    "category": "business",
+                    "correct_answer": "D",
+                    "predicted_answer": "H",
+                    "is_correct": false,
+                    "response": "H"
+                },
+                {
+                    "question_id": 1246,
+                    "difficulty": 0.5,
+                    "category": "law",
+                    "correct_answer": "F",
+                    "predicted_answer": "A",
+                    "is_correct": false,
+                    "response": "Answer: F"
+                },
+                {
+                    "question_id": 1726,
+                    "difficulty": 0.522,
+                    "category": "law",
+                    "correct_answer": "C",
+                    "predicted_answer": "C",
+                    "is_correct": true,
+                    "response": "C"
+                },
+                {
+                    "question_id": 2089,
+                    "difficulty": 0.543,
+                    "category": "psychology",
+                    "correct_answer": "E",
+                    "predicted_answer": "E",
+                    "is_correct": true,
+                    "response": "E"
+                },
+                {
+                    "question_id": 3534,
+                    "difficulty": 0.581,
+                    "category": "chemistry",
+                    "correct_answer": "I",
+                    "predicted_answer": "I",
+                    "is_correct": true,
+                    "response": "I"
+                },
+                {
+                    "question_id": 3717,
+                    "difficulty": 0.545,
+                    "category": "chemistry",
+                    "correct_answer": "E",
+                    "predicted_answer": "E",
+                    "is_correct": true,
+                    "response": "E"
+                },
+                {
+                    "question_id": 3807,
+                    "difficulty": 0.587,
+                    "category": "chemistry",
+                    "correct_answer": "B",
+                    "predicted_answer": "B",
+                    "is_correct": true,
+                    "response": "B"
+                },
+                {
+                    "question_id": 4306,
+                    "difficulty": 0.543,
+                    "category": "chemistry",
+                    "correct_answer": "E",
+                    "predicted_answer": "E",
+                    "is_correct": true,
+                    "response": "E"
+                },
+                {
+                    "question_id": 4568,
+                    "difficulty": 0.543,
+                    "category": "chemistry",
+                    "correct_answer": "C",
+                    "predicted_answer": "C",
+                    "is_correct": true,
+                    "response": "C"
+                }
+            ],
+            "moderately_easy_0.6_0.7": [
+                {
+                    "question_id": 134,
+                    "difficulty": 0.6880000000000001,
+                    "category": "business",
+                    "correct_answer": "E",
+                    "predicted_answer": "E",
+                    "is_correct": true,
+                    "response": "E"
+                },
+                {
+                    "question_id": 158,
+                    "difficulty": 0.617,
+                    "category": "business",
+                    "correct_answer": "E",
+                    "predicted_answer": "E",
+                    "is_correct": true,
+                    "response": "E"
+                },
+                {
+                    "question_id": 225,
+                    "difficulty": 0.6890000000000001,
+                    "category": "business",
+                    "correct_answer": "H",
+                    "predicted_answer": "H",
+                    "is_correct": true,
+                    "response": "H"
+                },
+                {
+                    "question_id": 233,
+                    "difficulty": 0.66,
+                    "category": "business",
+                    "correct_answer": "A",
+                    "predicted_answer": "A",
+                    "is_correct": true,
+                    "response": "A"
+                },
+                {
+                    "question_id": 234,
+                    "difficulty": 0.6880000000000001,
+                    "category": "business",
+                    "correct_answer": "J",
+                    "predicted_answer": "J",
+                    "is_correct": true,
+                    "response": "J"
+                },
+                {
+                    "question_id": 377,
+                    "difficulty": 0.66,
+                    "category": "business",
+                    "correct_answer": "E",
+                    "predicted_answer": "E",
+                    "is_correct": true,
+                    "response": "E"
+                },
+                {
+                    "question_id": 766,
+                    "difficulty": 0.66,
+                    "category": "business",
+                    "correct_answer": "A",
+                    "predicted_answer": "A",
+                    "is_correct": true,
+                    "response": "A"
+                },
+                {
+                    "question_id": 813,
+                    "difficulty": 0.614,
+                    "category": "business",
+                    "correct_answer": "G",
+                    "predicted_answer": "J",
+                    "is_correct": false,
+                    "response": "J"
+                },
+                {
+                    "question_id": 1363,
+                    "difficulty": 0.6960000000000001,
+                    "category": "law",
+                    "correct_answer": "F",
+                    "predicted_answer": "F",
+                    "is_correct": true,
+                    "response": "F"
+                },
+                {
+                    "question_id": 1388,
+                    "difficulty": 0.617,
+                    "category": "law",
+                    "correct_answer": "I",
+                    "predicted_answer": "I",
+                    "is_correct": true,
+                    "response": "I"
+                }
+            ],
+            "easy_0.7_0.8": [
+                {
+                    "question_id": 560,
+                    "difficulty": 0.737,
+                    "category": "business",
+                    "correct_answer": "E",
+                    "predicted_answer": "E",
+                    "is_correct": true,
+                    "response": "E"
+                },
+                {
+                    "question_id": 589,
+                    "difficulty": 0.787,
+                    "category": "business",
+                    "correct_answer": "F",
+                    "predicted_answer": "F",
+                    "is_correct": true,
+                    "response": "F"
+                },
+                {
+                    "question_id": 1047,
+                    "difficulty": 0.7020000000000001,
+                    "category": "law",
+                    "correct_answer": "C",
+                    "predicted_answer": "H",
+                    "is_correct": false,
+                    "response": "H"
+                },
+                {
+                    "question_id": 1387,
+                    "difficulty": 0.723,
+                    "category": "law",
+                    "correct_answer": "G",
+                    "predicted_answer": "G",
+                    "is_correct": true,
+                    "response": "G"
+                },
+                {
+                    "question_id": 1525,
+                    "difficulty": 0.7020000000000001,
+                    "category": "law",
+                    "correct_answer": "B",
+                    "predicted_answer": "B",
+                    "is_correct": true,
+                    "response": "B"
+                },
+                {
+                    "question_id": 2104,
+                    "difficulty": 0.766,
+                    "category": "psychology",
+                    "correct_answer": "J",
+                    "predicted_answer": "J",
+                    "is_correct": true,
+                    "response": "J"
+                },
+                {
+                    "question_id": 2746,
+                    "difficulty": 0.783,
+                    "category": "psychology",
+                    "correct_answer": "I",
+                    "predicted_answer": "I",
+                    "is_correct": true,
+                    "response": "I"
+                },
+                {
+                    "question_id": 2965,
+                    "difficulty": 0.75,
+                    "category": "biology",
+                    "correct_answer": "A",
+                    "predicted_answer": "A",
+                    "is_correct": true,
+                    "response": "A"
+                },
+                {
+                    "question_id": 2989,
+                    "difficulty": 0.745,
+                    "category": "biology",
+                    "correct_answer": "J",
+                    "predicted_answer": "J",
+                    "is_correct": true,
+                    "response": "J"
+                },
+                {
+                    "question_id": 3079,
+                    "difficulty": 0.767,
+                    "category": "biology",
+                    "correct_answer": "H",
+                    "predicted_answer": "H",
+                    "is_correct": true,
+                    "response": "H"
+                }
+            ],
+            "very_easy_0.8_0.9": [
+                {
+                    "question_id": 884,
+                    "difficulty": 0.848,
+                    "category": "law",
+                    "correct_answer": "B",
+                    "predicted_answer": "B",
+                    "is_correct": true,
+                    "response": "B"
+                },
+                {
+                    "question_id": 903,
+                    "difficulty": 0.804,
+                    "category": "law",
+                    "correct_answer": "I",
+                    "predicted_answer": "I",
+                    "is_correct": true,
+                    "response": "I"
+                },
+                {
+                    "question_id": 1202,
+                    "difficulty": 0.809,
+                    "category": "law",
+                    "correct_answer": "C",
+                    "predicted_answer": "C",
+                    "is_correct": true,
+                    "response": "C"
+                },
+                {
+                    "question_id": 1856,
+                    "difficulty": 0.872,
+                    "category": "law",
+                    "correct_answer": "D",
+                    "predicted_answer": "D",
+                    "is_correct": true,
+                    "response": "D"
+                },
+                {
+                    "question_id": 2061,
+                    "difficulty": 0.87,
+                    "category": "psychology",
+                    "correct_answer": "G",
+                    "predicted_answer": "G",
+                    "is_correct": true,
+                    "response": "G"
+                },
+                {
+                    "question_id": 2533,
+                    "difficulty": 0.851,
+                    "category": "psychology",
+                    "correct_answer": "E",
+                    "predicted_answer": "E",
+                    "is_correct": true,
+                    "response": "E"
+                },
+                {
+                    "question_id": 2713,
+                    "difficulty": 0.8300000000000001,
+                    "category": "psychology",
+                    "correct_answer": "C",
+                    "predicted_answer": "C",
+                    "is_correct": true,
+                    "response": "C"
+                },
+                {
+                    "question_id": 2917,
+                    "difficulty": 0.857,
+                    "category": "biology",
+                    "correct_answer": "G",
+                    "predicted_answer": "G",
+                    "is_correct": true,
+                    "response": "G"
+                },
+                {
+                    "question_id": 2994,
+                    "difficulty": 0.851,
+                    "category": "biology",
+                    "correct_answer": "B",
+                    "predicted_answer": "B",
+                    "is_correct": true,
+                    "response": "B"
+                },
+                {
+                    "question_id": 3124,
+                    "difficulty": 0.881,
+                    "category": "biology",
+                    "correct_answer": "A",
+                    "predicted_answer": "A",
+                    "is_correct": true,
+                    "response": "A"
+                }
+            ],
+            "extremely_easy_0.9_1.0": [
+                {
+                    "question_id": 384,
+                    "difficulty": 0.9510000000000001,
+                    "category": "business",
+                    "correct_answer": "A",
+                    "predicted_answer": "A",
+                    "is_correct": true,
+                    "response": "A"
+                },
+                {
+                    "question_id": 631,
+                    "difficulty": 0.9570000000000001,
+                    "category": "business",
+                    "correct_answer": "E",
+                    "predicted_answer": "E",
+                    "is_correct": true,
+                    "response": "E"
+                },
+                {
+                    "question_id": 685,
+                    "difficulty": 0.915,
+                    "category": "business",
+                    "correct_answer": "B",
+                    "predicted_answer": "B",
+                    "is_correct": true,
+                    "response": "B"
+                },
+                {
+                    "question_id": 2079,
+                    "difficulty": 0.9570000000000001,
+                    "category": "psychology",
+                    "correct_answer": "B",
+                    "predicted_answer": "B",
+                    "is_correct": true,
+                    "response": "B"
+                },
+                {
+                    "question_id": 2429,
+                    "difficulty": 0.979,
+                    "category": "psychology",
+                    "correct_answer": "B",
+                    "predicted_answer": "B",
+                    "is_correct": true,
+                    "response": "B"
+                },
+                {
+                    "question_id": 2480,
+                    "difficulty": 0.979,
+                    "category": "psychology",
+                    "correct_answer": "B",
+                    "predicted_answer": "B",
+                    "is_correct": true,
+                    "response": "B"
+                },
+                {
+                    "question_id": 2554,
+                    "difficulty": 0.936,
+                    "category": "psychology",
+                    "correct_answer": "A",
+                    "predicted_answer": "A",
+                    "is_correct": true,
+                    "response": "A"
+                },
+                {
+                    "question_id": 2744,
+                    "difficulty": 0.978,
+                    "category": "psychology",
+                    "correct_answer": "F",
+                    "predicted_answer": "F",
+                    "is_correct": true,
+                    "response": "F"
+                },
+                {
+                    "question_id": 3032,
+                    "difficulty": 0.927,
+                    "category": "biology",
+                    "correct_answer": "H",
+                    "predicted_answer": "H",
+                    "is_correct": true,
+                    "response": "H"
+                },
+                {
+                    "question_id": 3230,
+                    "difficulty": 0.9570000000000001,
+                    "category": "biology",
+                    "correct_answer": "D",
+                    "predicted_answer": "D",
+                    "is_correct": true,
+                    "response": "D"
+                }
+            ]
+        }
+    }
+}

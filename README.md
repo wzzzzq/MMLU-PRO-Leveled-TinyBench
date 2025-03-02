@@ -27,10 +27,8 @@ GLM_API_KEY=...
 
 ### 运行测试
 ```python
-python benchmark.py \
-  --provider deepseek \  # 可选供应商
-  --level college \      # 指定难度层级
-  --num_samples 50      # 抽样题量
+python main.py \
+  --num 50      # 每个难度级别的抽样题量
 ```
 结果将生成于`results/`目录，含json统计文件和markdown准确率表格
 

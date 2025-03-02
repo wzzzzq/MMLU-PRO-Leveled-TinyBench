@@ -55,15 +55,3 @@ python main.py \
 - [ ] 增加GPT-4/Claude等对照组模型
 - [ ] 自动化结果分析报告生成
 
-
-## 许可协议 ©️
-MIT License
-```
-
----
-
-<details>
-<summary>English Version (Coming Soon)</summary>
-Work in progress...
-</details>
-```

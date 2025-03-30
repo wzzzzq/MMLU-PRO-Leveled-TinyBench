@@ -7,8 +7,8 @@
 2. **学科专项测评**：即将推出的`Subject-Specific`子集将按学科（如化学、物理等）划分问题，帮助选择最优领域模型
 3. **供应商对比**：支持横向对比不同API服务商提供的同源模型性能表现
 
-## 数据集结构 📂
-
+## 数据集
+https://huggingface.co/datasets/wzzzq/MMLU-PRO-Leveled-TinyBench
 
 ## 快速开始 🚀
 ### 环境配置
